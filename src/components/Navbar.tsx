@@ -10,7 +10,7 @@ export default function Navbar({ user }: { user: JWTPayload }) {
     const handleLogout = async () => {
         await fetch("/api/auth/logout", { method: "POST" });
         toast.success("Logged out");
-        router.push("/login");
+        router.push("/");
         router.refresh();
     };
 
